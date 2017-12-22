@@ -13,16 +13,21 @@ namespace say2EatTests
 
         static void Main(string[] args)
         {
-            Console.WriteLine("insert your order");
-            string input = Console.ReadLine();
-            Console.WriteLine(AnalizeInput(input));
-             input = Console.ReadLine();
+            string resualt = "";
+            do
+            {
+                Console.WriteLine("insert your order");
+                resualt = AnalizeInput(Console.ReadLine());
+                Console.WriteLine(resualt);
+                string input = Console.ReadLine();
+            } while (resualt == "Please try again");
         }
 
         public static string AnalizeInput(string input)
         {
             var resualt = "";
-            if (string.IsNullOrEmpty(input))
+
+            if (!string.IsNullOrEmpty(input))
             {
                 Order order = new Order();
                 
@@ -34,19 +39,42 @@ namespace say2EatTests
 
                     }
                 }
+                if(order.main == null)
+                {
+                    return "Please try again";
+                }
 
                 foreach (var item in addons)
                 {
+
                     if (input.Contains(item))
                     {
-                        order.addons += item + ",";
+                        if (order.addons == null)
+                        {
+                            order.addons += item;
+                        }
+                        else
+                        {
+                            order.addons += ", " + item;
+                        }
+
                     }
                 }
-                resualt =  "Your " + order.main + " with " + order.addons + "is on the way";
+
+                if(order.addons == null)
+                {
+                    resualt = "Your " + order.main + " is on the way";
+                }
+                else
+                {
+                    resualt =  "Your " + order.main + " with " + order.addons + " is on the way";
+
+                }
             }
             else
             {
                 return "Please try again";
+                
             }
 
             return resualt;
