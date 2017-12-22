@@ -19,24 +19,54 @@ namespace say2EatTests
                 Console.WriteLine("insert your order");
                 resualt = AnalizeInput(Console.ReadLine());
                 Console.WriteLine(resualt);
-                string input = Console.ReadLine();
+                
             } while (resualt == "Please try again");
+            Console.ReadKey();
         }
 
         public static string AnalizeInput(string input)
         {
             var resualt = "";
+            int countMainDish = 0;
+            int countAddons = 0;
 
             if (!string.IsNullOrEmpty(input))
             {
                 Order order = new Order();
-                
+
+                String[] arr = input.Split(' ');
+
+
+                foreach(var word in arr)
+                {
+                    foreach(var item in maindish)
+                    {
+                        if(word == item)
+                        {
+                            countMainDish++;
+                        }
+                    }
+
+                    foreach (var item in addons)
+                    {
+                        if (word == item)
+                        {
+                            countAddons++;
+                        }
+                    }
+                }
+
+                if(countMainDish > 1)
+                {
+                    return "Please try again";
+                }
+
                 foreach (var item in maindish)
                 {
+
                     if (input.Contains(item))
                     {
                         order.main = item;
-
                     }
                 }
                 if(order.main == null)

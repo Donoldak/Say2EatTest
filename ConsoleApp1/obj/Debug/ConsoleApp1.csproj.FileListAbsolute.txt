@@ -15,7 +15,7 @@ C:\Users\yocha\source\repos\say2EatTests\Say2EatTest\ConsoleApp1\obj\Debug\Conso
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\bin\Debug\ConsoleApp1.exe
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\User\Desktop\прога\say2eat\Say2EatTest.git\ConsoleApp1\obj\Debug\ConsoleApp1.csprojResolveAssemblyReference.cache
